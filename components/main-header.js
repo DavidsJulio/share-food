@@ -7,7 +7,8 @@ export default function MainHeader() {
   return (
     <header className={classes.header}>
       <Link className={classes.logo} href="/">
-        <Image src={logoImg} alt="A plate with food" />
+        <Image src={logoImg} alt="A plate with food" priority />{" "}
+        {/** To make sure it's not lazy loading since it will be all the time accessible */}
         Share food
       </Link>
       <nav className={classes.nav}>
