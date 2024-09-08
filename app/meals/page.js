@@ -2,8 +2,12 @@ import React from "react";
 import classes from "@/app/meals/page.module.css";
 import Link from "next/link";
 import MealsGrid from "@/components/meals/meals-grid";
+import { getMeals } from "@/lib/meals";
 
-export default function Meals() {
+// We can use async await in server side components
+export default async function Meals() {
+  const meals = await getMeals();
+
   return (
     <>
       <header className={classes.header}>
@@ -19,7 +23,7 @@ export default function Meals() {
         </p>
       </header>
       <main className={classes.main}>
-        <MealsGrid meals={[]} />
+        <MealsGrid meals={meals} />
       </main>
     </>
   );
