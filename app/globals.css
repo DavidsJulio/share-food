@@ -16,6 +16,10 @@ body {
   color: #ddd8e4;
 }
 
+.children-wrapper {
+  padding-bottom: 1rem;
+}
+
 main {
   text-align: center;
   margin: 5rem auto;
